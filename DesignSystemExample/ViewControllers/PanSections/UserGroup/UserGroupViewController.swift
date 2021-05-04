@@ -9,19 +9,15 @@ import UIKit
 import Skyline // PanModalPresentable
 
 struct UserGroupHeaderPresentable: Equatable {
-
 	let handle: String
 	let description: String
 	let memberCount: Int
-
 }
 
 struct UserGroupMemberPresentable: Equatable {
-
 	let name: String
 	let role: String
 	let avatarBackgroundColor: UIColor
-
 }
 
 class UserGroupViewController: UITableViewController, PanModalPresentable {

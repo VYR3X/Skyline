@@ -25,6 +25,8 @@ final class ViewController: UIViewController {
 		return button
 	}()
 
+	let pinPad = SkyPinPad()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = .systemBlue
@@ -38,12 +40,15 @@ final class ViewController: UIViewController {
 
 	private func setupView() {
 		view.addSubview(currencyButton)
+		view.addSubview(pinPad)
 		NSLayoutConstraint.activate([
 			currencyButton.widthAnchor.constraint(equalTo: view.widthAnchor),
 			currencyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-			currencyButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+			currencyButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+
+			pinPad.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+			pinPad.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+			pinPad.bottomAnchor.constraint(equalTo: view.bottomAnchor)
 		])
-//		view.add
 	}
 }
-

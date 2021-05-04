@@ -41,6 +41,8 @@
 		01C698192641BA8D007AE440 /* UserGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C698182641BA8D007AE440 /* UserGroupViewController.swift */; };
 		01C6981E2641BAD2007AE440 /* UserGroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6981D2641BAD2007AE440 /* UserGroupHeaderView.swift */; };
 		01C698222641BAE6007AE440 /* UserGroupMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C698212641BAE6007AE440 /* UserGroupMemberCell.swift */; };
+		01C698262641C1DF007AE440 /* SkyPinPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C698252641C1DF007AE440 /* SkyPinPad.swift */; };
+		01C6982D2641CB7D007AE440 /* UIView+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6982C2641CB7D007AE440 /* UIView+ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		01C698182641BA8D007AE440 /* UserGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupViewController.swift; sourceTree = "<group>"; };
 		01C6981D2641BAD2007AE440 /* UserGroupHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupHeaderView.swift; sourceTree = "<group>"; };
 		01C698212641BAE6007AE440 /* UserGroupMemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupMemberCell.swift; sourceTree = "<group>"; };
+		01C698252641C1DF007AE440 /* SkyPinPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyPinPad.swift; sourceTree = "<group>"; };
+		01C6982C2641CB7D007AE440 /* UIView+ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +263,7 @@
 				01C6979F2641ADEF007AE440 /* CollectionView */,
 				01C697AD2641AFA4007AE440 /* PaginationView */,
 				01C697A02641AE00007AE440 /* PinPad */,
+				01C6982B2641CB71007AE440 /* Extension */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 		01C697A02641AE00007AE440 /* PinPad */ = {
 			isa = PBXGroup;
 			children = (
+				01C698252641C1DF007AE440 /* SkyPinPad.swift */,
 			);
 			path = PinPad;
 			sourceTree = "<group>";
@@ -422,6 +428,14 @@
 				01C698212641BAE6007AE440 /* UserGroupMemberCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		01C6982B2641CB71007AE440 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				01C6982C2641CB7D007AE440 /* UIView+ex.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -575,6 +589,7 @@
 				01C697C62641B1D0007AE440 /* PanModalPresentationController.swift in Sources */,
 				01C697E42641B258007AE440 /* PanModalPresentable+UIViewController.swift in Sources */,
 				01C697EF2641B26F007AE440 /* PanModalPresenter.swift in Sources */,
+				01C698262641C1DF007AE440 /* SkyPinPad.swift in Sources */,
 				01C697D02641B1F9007AE440 /* PanModalHeight.swift in Sources */,
 				01C697F42641B27F007AE440 /* UIViewController+PanModalPresenterProtocol.swift in Sources */,
 				01C697CB2641B1E9007AE440 /* PanModalPresentationDelegate.swift in Sources */,
@@ -603,6 +618,7 @@
 				01C6981E2641BAD2007AE440 /* UserGroupHeaderView.swift in Sources */,
 				01C698222641BAE6007AE440 /* UserGroupMemberCell.swift in Sources */,
 				01C6971B2641A6EC007AE440 /* ViewController.swift in Sources */,
+				01C6982D2641CB7D007AE440 /* UIView+ex.swift in Sources */,
 				01C697172641A6EC007AE440 /* AppDelegate.swift in Sources */,
 				01C697192641A6EC007AE440 /* SceneDelegate.swift in Sources */,
 				01C698142641BA59007AE440 /* MainViewController.swift in Sources */,

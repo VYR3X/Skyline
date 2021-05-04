@@ -1,0 +1,287 @@
+//
+//  SkyPinPad.swift
+//  Skyline
+//
+//  Created by 17790204 on 04.05.2021.
+//
+
+import UIKit
+import AudioToolbox
+
+/**
+ Вью для ввода пинкода, по сути нумпад с двумя вспомогательными кнопками
+
+ Пример использования:
+ ~~~
+ let pinPadView = GPinPad()
+
+ pinPadView.g.digitColor = .brand
+ pinPadView.g.digitFont = .footnote
+ pinPadView.g.leftButtonInfo.picture = nil
+
+ pinPadView.delegate = self
+
+ // добавляем как сабвью, выставляем констрейнты
+ ~~~
+
+ - important: Пинпад сам себе выставляет констрейнт соотношения сторон!
+ */
+
+/// Системные звуки клавиатуры
+enum SystemSound: UInt32 {
+
+	case pressClick = 1123
+	case pressDelete = 1155
+
+	func play() {
+		AudioServicesPlaySystemSound(self.rawValue)
+	}
+}
+
+public final class SkyPinPad: UIView {
+
+	private enum AccessoryButtonPosition {
+		case left, right
+	}
+
+	private struct Const {
+		static let aspectRatio: CGFloat = 1.0
+		static let animationDuration: TimeInterval = 0.25
+		static let pressedScale: CGFloat = 0.8
+	}
+
+	private lazy var stackView = makeColumnStackView(arrangedSubviews: [row1, row2, row3, row4])
+	private lazy var row1 = makeRowStackView(arrangedSubviews: Array(digitButtons[1 ... 3]))
+	private lazy var row2 = makeRowStackView(arrangedSubviews: Array(digitButtons[4 ... 6]))
+	private lazy var row3 = makeRowStackView(arrangedSubviews: Array(digitButtons[7 ... 9]))
+	private lazy var row4 = makeRowStackView(arrangedSubviews: [makeContainer(for: leftButton),
+																digitButtons[0],
+																makeContainer(for: rightButton)])
+
+	private lazy var digitButtons: [UIButton] = {
+		var array = [UIButton]()
+		for index in 0 ..< 10 {
+			let button = makeDigitButton()
+			button.backgroundColor = .white
+//			button.g.text = String(index)
+//			button.g.voiceOver.id = "GPinPad.Кнопка.\(index)"
+			array.append(button)
+		}
+		return array
+	}()
+
+	private lazy var leftButton = makeAccessoryButton(position: .left)
+	private lazy var rightButton = makeAccessoryButton(position: .right)
+
+	///  Конфигурация пинпада
+//	public let g: GPinPadConfiguration<GPinPad>
+
+	///  Делегат пинпада
+//	public weak var delegate: GPinPadDelegate?
+
+	/// Конструктор
+	/// - Parameters:
+	///   - style: стиль
+	init() {
+		super.init(frame: .zero)
+//		g.owner = self
+		self.translatesAutoresizingMaskIntoConstraints = false
+		setupViews()
+	}
+
+	@available(*, unavailable)
+	required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+	@available(*, unavailable)
+	public override init(frame: CGRect) { fatalError("init(coder:) has not been implemented") }
+
+	private func setupViews() {
+		addSubview(stackView)
+		stackView.pinToSuperView()
+		self.heightAnchor.constraint(equalTo: widthAnchor, multiplier: Const.aspectRatio).isActive = true
+	}
+
+	private func makeRowStackView(arrangedSubviews: [UIView]) -> UIStackView {
+		let stackView = UIStackView(arrangedSubviews: arrangedSubviews)
+		stackView.translatesAutoresizingMaskIntoConstraints = false
+		stackView.axis = .horizontal
+		stackView.alignment = .fill
+		stackView.distribution = .equalSpacing
+		return stackView
+	}
+
+	private func makeColumnStackView(arrangedSubviews: [UIView]) -> UIStackView {
+		let stackView = UIStackView(arrangedSubviews: arrangedSubviews)
+		stackView.translatesAutoresizingMaskIntoConstraints = false
+		stackView.axis = .vertical
+		stackView.alignment = .fill
+		stackView.distribution = .fillEqually
+		stackView.spacing = .zero
+		return stackView
+	}
+
+	private func configureDigitButton(_ button: UIButton) {
+//		button.g.font = g.digitFont
+//		button.g.textColor = g.digitColor
+	}
+
+	private func makeDigitButton() -> UIButton {
+		let button = UIButton()
+		configureDigitButton(button)
+		addPressAnimation(to: button)
+		button.makeSquare()
+		let height = button.bounds.height / 2
+		button.layer.cornerRadius = height
+//		button.g.cornerRadius = .circle
+//		button.g.addHandler(for: .touchUpInside) { [weak self] in
+//			guard let self = self, let text = button.g.text else { return }
+//			SystemSound.pressClick.play()
+//			self.delegate?.pinPadView(self, didTapDigitButtonWith: text.string)
+//		}
+		return button
+	}
+
+	private func configureAccessoryButton(_ button: UIButton, info: String) {
+//		button.isHidden = info.picture == nil
+//		if let picture = info.picture {
+//			button.g.picture = picture
+//		}
+	}
+
+	private func makeAccessoryButton(position: AccessoryButtonPosition) -> UIButton {
+		let button = UIButton()
+		addPressAnimation(to: button)
+		// не делаем ее квадратной, потому что она лежит в квадратной вьюхе
+		button.adjustsImageWhenHighlighted = false
+//		button.g.cornerRadius = .circle
+		switch position {
+		case .left:
+			print("ff")
+//			configureAccessoryButton(button, info: g.leftButtonInfo)
+//			button.addHandler(for: .touchUpInside) { [weak self] in
+//				guard let self = self else { return }
+//				self.delegate?.pinPadViewDidTapLeftButton(self)
+//			}
+		case .right:
+			print("ff")
+//			configureAccessoryButton(button, info: g.rightButtonInfo)
+//			button.g.addHandler(for: .touchUpInside) { [weak self] in
+//				guard let self = self else { return }
+//				SystemSound.pressDelete.play()
+//				self.delegate?.pinPadViewDidTapRightButton(self)
+//			}
+		}
+
+		return button
+	}
+
+	private func addPressAnimation(to button: UIButton) {
+//		button.g.associate(states: .default) { g in
+//			g.backgroundColor = .clear
+//		}
+//		button.g.associate(states: .pressed) { g in
+//			g.backgroundColor = .onBackgroundQuaternary
+//		}
+	}
+
+	private func makeContainer(for view: UIView) -> UIView {
+		let containerView = UIView()
+//		containerView.makeSquare()
+		containerView.addSubview(view)
+//		view.pinToSuperView()
+		return containerView
+	}
+
+	///  Обновить кнопки с цифрами
+	func updateDigitButtons() {
+		digitButtons.forEach { configureDigitButton($0) }
+	}
+
+	///  Обновить вспомогательные кнопки
+	func updateAccessoryButtons() {
+//		configureAccessoryButton(leftButton, info: g.leftButtonInfo)
+//		configureAccessoryButton(rightButton, info: g.rightButtonInfo)
+	}
+
+	///  Узнать предпочтительную высоту для конкретной ширины
+	///
+	/// - Parameter width:  желаемая ширина
+	/// - Returns: предпочтительная высота
+	public func preferredHeightWith(width: CGFloat) -> CGFloat {
+		return width * Const.aspectRatio
+	}
+
+	/// Добавление возможности вводить значения на GPinPad с физической клавиатуры MAC
+	#if targetEnvironment(simulator)
+		/// Становится firstResponder, как только добавились на супервью
+		public override func didMoveToSuperview() {
+			super.didMoveToSuperview()
+			becomeFirstResponder()
+		}
+
+		/// Может становиться firstResponder
+		public override var canBecomeFirstResponder: Bool {
+			return true
+		}
+
+		/// Массив комманд, на которые реагирует вью
+		public override var keyCommands: [UIKeyCommand] {
+			return (1 ... 9).map { UIKeyCommand(input: String($0),
+												modifierFlags: [],
+												action: #selector(handleKeyboardInput))
+			}
+		}
+
+		/// Обработка нажатий с клавиатуры
+		@objc private func handleKeyboardInput(with command: UIKeyCommand) {
+			if let input = command.input {
+//				delegate?.pinPadView(self, didTapDigitButtonWith: input)
+			}
+		}
+	#endif
+}
+
+
+public extension UIView {
+
+	///  Прицепить вью констрейнтами к супервью с одинаковым отступом от всех сторон
+	///
+	/// - Parameters:
+	///   - inset:  отступ
+	func pinToSuperView(inset: CGFloat = 0.0) {
+		pinToSuperView(insets: UIEdgeInsets(top: inset,
+									   left: inset,
+									   bottom: inset,
+									   right: inset))
+	}
+
+	///  Прицепить вью констрейнтами к супервью с разным отступом от всех сторон
+	///
+	/// - Parameters:
+	///   - insets:  отступы
+	func pinToSuperView(insets: UIEdgeInsets) {
+
+		guard let superview = superview else { return }
+
+		let top = superview.topAnchor
+		let leading = superview.leadingAnchor
+		let trailing = superview.trailingAnchor
+		let bottom = superview.bottomAnchor
+
+		translatesAutoresizingMaskIntoConstraints = false
+		NSLayoutConstraint.activate([
+			topAnchor.constraint(equalTo: top, constant: insets.top),
+			leadingAnchor.constraint(equalTo: leading, constant: insets.left),
+			trailingAnchor.constraint(equalTo: trailing, constant: -insets.right),
+			bottomAnchor.constraint(equalTo: bottom, constant: -insets.bottom)
+		])
+	}
+
+	/// Сделать вьюху квадратной
+	/// - Parameter side: Длина стороны, если нужно
+	func makeSquare(side: CGFloat? = nil) {
+		heightAnchor.constraint(equalTo: widthAnchor).isActive = true
+		if let side = side {
+			heightAnchor.constraint(equalToConstant: side).isActive = true
+		}
+	}
+}
