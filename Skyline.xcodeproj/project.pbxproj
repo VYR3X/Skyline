@@ -16,6 +16,11 @@
 		01C6971E2641A6EC007AE440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C6971C2641A6EC007AE440 /* Main.storyboard */; };
 		01C697202641A6F4007AE440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C6971F2641A6F4007AE440 /* Assets.xcassets */; };
 		01C697232641A6F4007AE440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C697212641A6F4007AE440 /* LaunchScreen.storyboard */; };
+		01C697892641ACB1007AE440 /* LightPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697882641ACB1007AE440 /* LightPalette.swift */; };
+		01C6978E2641ACC5007AE440 /* DarkPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6978D2641ACC5007AE440 /* DarkPalette.swift */; };
+		01C697932641ACF6007AE440 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697922641ACF6007AE440 /* Palette.swift */; };
+		01C697982641AD3C007AE440 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697972641AD3C007AE440 /* Color.swift */; };
+		01C697A32641AE40007AE440 /* SkySeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697A22641AE40007AE440 /* SkySeparatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,11 @@
 		01C6971F2641A6F4007AE440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01C697222641A6F4007AE440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01C697242641A6F4007AE440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01C697882641ACB1007AE440 /* LightPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPalette.swift; sourceTree = "<group>"; };
+		01C6978D2641ACC5007AE440 /* DarkPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkPalette.swift; sourceTree = "<group>"; };
+		01C697922641ACF6007AE440 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		01C697972641AD3C007AE440 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		01C697A22641AE40007AE440 /* SkySeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkySeparatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,9 @@
 		01C696F62641A66D007AE440 /* Skyline */ = {
 			isa = PBXGroup;
 			children = (
+				01C697822641AAFC007AE440 /* Resources */,
+				01C697832641AB76007AE440 /* Documentation */,
+				01C697852641ABB8007AE440 /* Framework */,
 				01C696F72641A66D007AE440 /* Skyline.h */,
 				01C696F82641A66D007AE440 /* Info.plist */,
 			);
@@ -112,15 +125,185 @@
 		01C697152641A6EC007AE440 /* DesignSystemExample */ = {
 			isa = PBXGroup;
 			children = (
-				01C697162641A6EC007AE440 /* AppDelegate.swift */,
-				01C697182641A6EC007AE440 /* SceneDelegate.swift */,
+				01C697812641AAB1007AE440 /* Resources */,
 				01C6971A2641A6EC007AE440 /* ViewController.swift */,
 				01C6971C2641A6EC007AE440 /* Main.storyboard */,
-				01C6971F2641A6F4007AE440 /* Assets.xcassets */,
+				01C697162641A6EC007AE440 /* AppDelegate.swift */,
+				01C697182641A6EC007AE440 /* SceneDelegate.swift */,
 				01C697212641A6F4007AE440 /* LaunchScreen.storyboard */,
 				01C697242641A6F4007AE440 /* Info.plist */,
 			);
 			path = DesignSystemExample;
+			sourceTree = "<group>";
+		};
+		01C697812641AAB1007AE440 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				01C6971F2641A6F4007AE440 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		01C697822641AAFC007AE440 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				01C697842641AB81007AE440 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		01C697832641AB76007AE440 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
+		01C697842641AB81007AE440 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		01C697852641ABB8007AE440 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				01C697862641AC6A007AE440 /* Palette */,
+				01C697872641AC7C007AE440 /* Elements */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		01C697862641AC6A007AE440 /* Palette */ = {
+			isa = PBXGroup;
+			children = (
+				01C697922641ACF6007AE440 /* Palette.swift */,
+				01C697972641AD3C007AE440 /* Color.swift */,
+				01C697882641ACB1007AE440 /* LightPalette.swift */,
+				01C6978D2641ACC5007AE440 /* DarkPalette.swift */,
+			);
+			path = Palette;
+			sourceTree = "<group>";
+		};
+		01C697872641AC7C007AE440 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				01C697AE2641AFBF007AE440 /* PanModel */,
+				01C697AC2641AF17007AE440 /* NavigationBar */,
+				01C697AB2641AF00007AE440 /* ImageView */,
+				01C697AA2641AEDA007AE440 /* Buttons */,
+				01C697A12641AE1E007AE440 /* Separator */,
+				01C6979F2641ADEF007AE440 /* CollectionView */,
+				01C697AD2641AFA4007AE440 /* PaginationView */,
+				01C697A02641AE00007AE440 /* PinPad */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		01C6979F2641ADEF007AE440 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		01C697A02641AE00007AE440 /* PinPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PinPad;
+			sourceTree = "<group>";
+		};
+		01C697A12641AE1E007AE440 /* Separator */ = {
+			isa = PBXGroup;
+			children = (
+				01C697A22641AE40007AE440 /* SkySeparatorView.swift */,
+			);
+			path = Separator;
+			sourceTree = "<group>";
+		};
+		01C697AA2641AEDA007AE440 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		01C697AB2641AF00007AE440 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
+		01C697AC2641AF17007AE440 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		01C697AD2641AFA4007AE440 /* PaginationView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PaginationView;
+			sourceTree = "<group>";
+		};
+		01C697AE2641AFBF007AE440 /* PanModel */ = {
+			isa = PBXGroup;
+			children = (
+				01C697B22641B0BC007AE440 /* Animator */,
+				01C697B32641B0C4007AE440 /* Controller */,
+				01C697B72641B0FB007AE440 /* Delegate */,
+				01C697B62641B0F4007AE440 /* Presentable */,
+				01C697B52641B0E1007AE440 /* Presenter */,
+				01C697B42641B0D6007AE440 /* View */,
+			);
+			path = PanModel;
+			sourceTree = "<group>";
+		};
+		01C697B22641B0BC007AE440 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animator;
+			sourceTree = "<group>";
+		};
+		01C697B32641B0C4007AE440 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		01C697B42641B0D6007AE440 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01C697B52641B0E1007AE440 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		01C697B62641B0F4007AE440 /* Presentable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentable;
+			sourceTree = "<group>";
+		};
+		01C697B72641B0FB007AE440 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +384,7 @@
 				TargetAttributes = {
 					01C696F32641A66D007AE440 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					01C696FC2641A66D007AE440 = {
 						CreatedOnToolsVersion = 12.2;
@@ -262,6 +446,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C697A32641AE40007AE440 /* SkySeparatorView.swift in Sources */,
+				01C697932641ACF6007AE440 /* Palette.swift in Sources */,
+				01C697982641AD3C007AE440 /* Color.swift in Sources */,
+				01C697892641ACB1007AE440 /* LightPalette.swift in Sources */,
+				01C6978E2641ACC5007AE440 /* DarkPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +627,7 @@
 		01C697092641A66D007AE440 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9RNG4YX44V;
@@ -454,6 +644,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = v.Skyline;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,6 +653,7 @@
 		01C6970A2641A66D007AE440 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9RNG4YX44V;
@@ -486,6 +678,7 @@
 		01C6970C2641A66D007AE440 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9RNG4YX44V;
 				INFOPLIST_FILE = SkylineTests/Info.plist;
@@ -504,6 +697,7 @@
 		01C6970D2641A66D007AE440 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9RNG4YX44V;
 				INFOPLIST_FILE = SkylineTests/Info.plist;
