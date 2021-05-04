@@ -21,6 +21,22 @@
 		01C697932641ACF6007AE440 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697922641ACF6007AE440 /* Palette.swift */; };
 		01C697982641AD3C007AE440 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697972641AD3C007AE440 /* Color.swift */; };
 		01C697A32641AE40007AE440 /* SkySeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697A22641AE40007AE440 /* SkySeparatorView.swift */; };
+		01C697B92641B196007AE440 /* PanModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697B82641B196007AE440 /* PanModalAnimator.swift */; };
+		01C697C12641B1B7007AE440 /* PanModalPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697C02641B1B7007AE440 /* PanModalPresentationAnimator.swift */; };
+		01C697C62641B1D0007AE440 /* PanModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697C52641B1D0007AE440 /* PanModalPresentationController.swift */; };
+		01C697CB2641B1E9007AE440 /* PanModalPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697CA2641B1E9007AE440 /* PanModalPresentationDelegate.swift */; };
+		01C697D02641B1F9007AE440 /* PanModalHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697CF2641B1F9007AE440 /* PanModalHeight.swift */; };
+		01C697D52641B214007AE440 /* PanModalPresentable+LayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697D42641B214007AE440 /* PanModalPresentable+LayoutHelpers.swift */; };
+		01C697DA2641B226007AE440 /* PanModalPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697D92641B226007AE440 /* PanModalPresentable.swift */; };
+		01C697DF2641B23B007AE440 /* PanModalPresentable+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697DE2641B23B007AE440 /* PanModalPresentable+Defaults.swift */; };
+		01C697E42641B258007AE440 /* PanModalPresentable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697E32641B258007AE440 /* PanModalPresentable+UIViewController.swift */; };
+		01C697EF2641B26F007AE440 /* PanModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697EE2641B26F007AE440 /* PanModalPresenter.swift */; };
+		01C697F42641B27F007AE440 /* UIViewController+PanModalPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697F32641B27F007AE440 /* UIViewController+PanModalPresenterProtocol.swift */; };
+		01C697F92641B290007AE440 /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697F82641B290007AE440 /* DimmedView.swift */; };
+		01C697FE2641B29F007AE440 /* PanContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697FD2641B29F007AE440 /* PanContainerView.swift */; };
+		01C698082641B3E4007AE440 /* Skyline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C696F42641A66D007AE440 /* Skyline.framework */; };
+		01C698092641B3E4007AE440 /* Skyline.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01C696F42641A66D007AE440 /* Skyline.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		01C698102641B555007AE440 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6980F2641B555007AE440 /* UIColor+hex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +47,28 @@
 			remoteGlobalIDString = 01C696F32641A66D007AE440;
 			remoteInfo = Skyline;
 		};
+		01C6980A2641B3E4007AE440 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01C696EB2641A66D007AE440 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01C696F32641A66D007AE440;
+			remoteInfo = Skyline;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		01C6980C2641B3E4007AE440 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				01C698092641B3E4007AE440 /* Skyline.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		01C696F42641A66D007AE440 /* Skyline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Skyline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +90,20 @@
 		01C697922641ACF6007AE440 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		01C697972641AD3C007AE440 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		01C697A22641AE40007AE440 /* SkySeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkySeparatorView.swift; sourceTree = "<group>"; };
+		01C697B82641B196007AE440 /* PanModalAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanModalAnimator.swift; sourceTree = "<group>"; };
+		01C697C02641B1B7007AE440 /* PanModalPresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanModalPresentationAnimator.swift; sourceTree = "<group>"; };
+		01C697C52641B1D0007AE440 /* PanModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanModalPresentationController.swift; sourceTree = "<group>"; };
+		01C697CA2641B1E9007AE440 /* PanModalPresentationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanModalPresentationDelegate.swift; sourceTree = "<group>"; };
+		01C697CF2641B1F9007AE440 /* PanModalHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanModalHeight.swift; sourceTree = "<group>"; };
+		01C697D42641B214007AE440 /* PanModalPresentable+LayoutHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PanModalPresentable+LayoutHelpers.swift"; sourceTree = "<group>"; };
+		01C697D92641B226007AE440 /* PanModalPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanModalPresentable.swift; sourceTree = "<group>"; };
+		01C697DE2641B23B007AE440 /* PanModalPresentable+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PanModalPresentable+Defaults.swift"; sourceTree = "<group>"; };
+		01C697E32641B258007AE440 /* PanModalPresentable+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PanModalPresentable+UIViewController.swift"; sourceTree = "<group>"; };
+		01C697EE2641B26F007AE440 /* PanModalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanModalPresenter.swift; sourceTree = "<group>"; };
+		01C697F32641B27F007AE440 /* UIViewController+PanModalPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PanModalPresenterProtocol.swift"; sourceTree = "<group>"; };
+		01C697F82641B290007AE440 /* DimmedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmedView.swift; sourceTree = "<group>"; };
+		01C697FD2641B29F007AE440 /* PanContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanContainerView.swift; sourceTree = "<group>"; };
+		01C6980F2641B555007AE440 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C698082641B3E4007AE440 /* Skyline.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +140,7 @@
 				01C697012641A66D007AE440 /* SkylineTests */,
 				01C697152641A6EC007AE440 /* DesignSystemExample */,
 				01C696F52641A66D007AE440 /* Products */,
+				01C698072641B3E4007AE440 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,7 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				01C697812641AAB1007AE440 /* Resources */,
-				01C6971A2641A6EC007AE440 /* ViewController.swift */,
+				01C698022641B316007AE440 /* ViewControllers */,
 				01C6971C2641A6EC007AE440 /* Main.storyboard */,
 				01C697162641A6EC007AE440 /* AppDelegate.swift */,
 				01C697182641A6EC007AE440 /* SceneDelegate.swift */,
@@ -182,6 +235,7 @@
 				01C697972641AD3C007AE440 /* Color.swift */,
 				01C697882641ACB1007AE440 /* LightPalette.swift */,
 				01C6978D2641ACC5007AE440 /* DarkPalette.swift */,
+				01C6980F2641B555007AE440 /* UIColor+hex.swift */,
 			);
 			path = Palette;
 			sourceTree = "<group>";
@@ -267,6 +321,8 @@
 		01C697B22641B0BC007AE440 /* Animator */ = {
 			isa = PBXGroup;
 			children = (
+				01C697B82641B196007AE440 /* PanModalAnimator.swift */,
+				01C697C02641B1B7007AE440 /* PanModalPresentationAnimator.swift */,
 			);
 			path = Animator;
 			sourceTree = "<group>";
@@ -274,6 +330,7 @@
 		01C697B32641B0C4007AE440 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				01C697C52641B1D0007AE440 /* PanModalPresentationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -281,6 +338,8 @@
 		01C697B42641B0D6007AE440 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				01C697F82641B290007AE440 /* DimmedView.swift */,
+				01C697FD2641B29F007AE440 /* PanContainerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,6 +347,8 @@
 		01C697B52641B0E1007AE440 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				01C697EE2641B26F007AE440 /* PanModalPresenter.swift */,
+				01C697F32641B27F007AE440 /* UIViewController+PanModalPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -295,6 +356,11 @@
 		01C697B62641B0F4007AE440 /* Presentable */ = {
 			isa = PBXGroup;
 			children = (
+				01C697CF2641B1F9007AE440 /* PanModalHeight.swift */,
+				01C697D92641B226007AE440 /* PanModalPresentable.swift */,
+				01C697DE2641B23B007AE440 /* PanModalPresentable+Defaults.swift */,
+				01C697E32641B258007AE440 /* PanModalPresentable+UIViewController.swift */,
+				01C697D42641B214007AE440 /* PanModalPresentable+LayoutHelpers.swift */,
 			);
 			path = Presentable;
 			sourceTree = "<group>";
@@ -302,8 +368,32 @@
 		01C697B72641B0FB007AE440 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				01C697CA2641B1E9007AE440 /* PanModalPresentationDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		01C698022641B316007AE440 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				01C6971A2641A6EC007AE440 /* ViewController.swift */,
+				01C698032641B32F007AE440 /* PanSections */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		01C698032641B32F007AE440 /* PanSections */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PanSections;
+			sourceTree = "<group>";
+		};
+		01C698072641B3E4007AE440 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,10 +453,12 @@
 				01C697102641A6EC007AE440 /* Sources */,
 				01C697112641A6EC007AE440 /* Frameworks */,
 				01C697122641A6EC007AE440 /* Resources */,
+				01C6980C2641B3E4007AE440 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				01C6980B2641B3E4007AE440 /* PBXTargetDependency */,
 			);
 			name = DesignSystemExample;
 			productName = DesignSystemExample;
@@ -447,9 +539,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				01C697A32641AE40007AE440 /* SkySeparatorView.swift in Sources */,
+				01C697DA2641B226007AE440 /* PanModalPresentable.swift in Sources */,
+				01C697FE2641B29F007AE440 /* PanContainerView.swift in Sources */,
 				01C697932641ACF6007AE440 /* Palette.swift in Sources */,
+				01C697D52641B214007AE440 /* PanModalPresentable+LayoutHelpers.swift in Sources */,
+				01C697C12641B1B7007AE440 /* PanModalPresentationAnimator.swift in Sources */,
+				01C697C62641B1D0007AE440 /* PanModalPresentationController.swift in Sources */,
+				01C697E42641B258007AE440 /* PanModalPresentable+UIViewController.swift in Sources */,
+				01C697EF2641B26F007AE440 /* PanModalPresenter.swift in Sources */,
+				01C697D02641B1F9007AE440 /* PanModalHeight.swift in Sources */,
+				01C697F42641B27F007AE440 /* UIViewController+PanModalPresenterProtocol.swift in Sources */,
+				01C697CB2641B1E9007AE440 /* PanModalPresentationDelegate.swift in Sources */,
 				01C697982641AD3C007AE440 /* Color.swift in Sources */,
 				01C697892641ACB1007AE440 /* LightPalette.swift in Sources */,
+				01C697B92641B196007AE440 /* PanModalAnimator.swift in Sources */,
+				01C697DF2641B23B007AE440 /* PanModalPresentable+Defaults.swift in Sources */,
+				01C698102641B555007AE440 /* UIColor+hex.swift in Sources */,
+				01C697F92641B290007AE440 /* DimmedView.swift in Sources */,
 				01C6978E2641ACC5007AE440 /* DarkPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +585,11 @@
 			isa = PBXTargetDependency;
 			target = 01C696F32641A66D007AE440 /* Skyline */;
 			targetProxy = 01C696FF2641A66D007AE440 /* PBXContainerItemProxy */;
+		};
+		01C6980B2641B3E4007AE440 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01C696F32641A66D007AE440 /* Skyline */;
+			targetProxy = 01C6980A2641B3E4007AE440 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -22,13 +22,16 @@ public final class SkySeparatorView: UIView {
 
 	public init() {
 		super.init(frame: .zero)
+		translatesAutoresizingMaskIntoConstraints = false
 		setup()
 	}
 
+	required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+
 	private func setup() {
-		self.backgroundColor = .black
+		self.backgroundColor = .gray
 //		self.backgroundColor = .lentaQuaternaryDark
-		self.heightAnchor.constraint(equalToConstant: Constants.height).activate()
+		self.heightAnchor.constraint(equalToConstant: Constants.height).isActive = true
 //		heightAnchor.constraint(equalToConstant: Constants.height).activate()
 	}
 }
