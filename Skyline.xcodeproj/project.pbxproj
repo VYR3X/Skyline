@@ -37,6 +37,10 @@
 		01C698082641B3E4007AE440 /* Skyline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C696F42641A66D007AE440 /* Skyline.framework */; };
 		01C698092641B3E4007AE440 /* Skyline.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01C696F42641A66D007AE440 /* Skyline.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01C698102641B555007AE440 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6980F2641B555007AE440 /* UIColor+hex.swift */; };
+		01C698142641BA59007AE440 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C698132641BA59007AE440 /* MainViewController.swift */; };
+		01C698192641BA8D007AE440 /* UserGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C698182641BA8D007AE440 /* UserGroupViewController.swift */; };
+		01C6981E2641BAD2007AE440 /* UserGroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6981D2641BAD2007AE440 /* UserGroupHeaderView.swift */; };
+		01C698222641BAE6007AE440 /* UserGroupMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C698212641BAE6007AE440 /* UserGroupMemberCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +108,10 @@
 		01C697F82641B290007AE440 /* DimmedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmedView.swift; sourceTree = "<group>"; };
 		01C697FD2641B29F007AE440 /* PanContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanContainerView.swift; sourceTree = "<group>"; };
 		01C6980F2641B555007AE440 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		01C698132641BA59007AE440 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		01C698182641BA8D007AE440 /* UserGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupViewController.swift; sourceTree = "<group>"; };
+		01C6981D2641BAD2007AE440 /* UserGroupHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupHeaderView.swift; sourceTree = "<group>"; };
+		01C698212641BAE6007AE440 /* UserGroupMemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupMemberCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				01C6971A2641A6EC007AE440 /* ViewController.swift */,
+				01C698132641BA59007AE440 /* MainViewController.swift */,
 				01C698032641B32F007AE440 /* PanSections */,
 			);
 			path = ViewControllers;
@@ -385,6 +394,7 @@
 		01C698032641B32F007AE440 /* PanSections */ = {
 			isa = PBXGroup;
 			children = (
+				01C698172641BA7C007AE440 /* UserGroup */,
 			);
 			path = PanSections;
 			sourceTree = "<group>";
@@ -394,6 +404,24 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01C698172641BA7C007AE440 /* UserGroup */ = {
+			isa = PBXGroup;
+			children = (
+				01C698182641BA8D007AE440 /* UserGroupViewController.swift */,
+				01C6981C2641BAC2007AE440 /* Views */,
+			);
+			path = UserGroup;
+			sourceTree = "<group>";
+		};
+		01C6981C2641BAC2007AE440 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01C6981D2641BAD2007AE440 /* UserGroupHeaderView.swift */,
+				01C698212641BAE6007AE440 /* UserGroupMemberCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,9 +600,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C6981E2641BAD2007AE440 /* UserGroupHeaderView.swift in Sources */,
+				01C698222641BAE6007AE440 /* UserGroupMemberCell.swift in Sources */,
 				01C6971B2641A6EC007AE440 /* ViewController.swift in Sources */,
 				01C697172641A6EC007AE440 /* AppDelegate.swift in Sources */,
 				01C697192641A6EC007AE440 /* SceneDelegate.swift in Sources */,
+				01C698142641BA59007AE440 /* MainViewController.swift in Sources */,
+				01C698192641BA8D007AE440 /* UserGroupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

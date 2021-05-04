@@ -2,7 +2,7 @@
 //  PanModalPresenter.swift
 //  Skyline
 //
-//  Created by 17790204 on 04.05.2021.
+//  Created by Vladislav Zhokhov on 04.05.2021.
 //
 
 #if os(iOS)
