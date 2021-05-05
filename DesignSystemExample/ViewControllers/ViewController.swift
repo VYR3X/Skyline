@@ -25,6 +25,16 @@ final class ViewController: UIViewController {
 		return button
 	}()
 
+	let skySwitch: SkySwitch = {
+		let sw = SkySwitch()
+		sw.translatesAutoresizingMaskIntoConstraints = false
+		sw.sky.isOn = true
+		sw.sky.onTintColor = .sunflower
+		sw.sky.thumbTintColor = .blueberry
+		sw.sky.backgroundColor = .generalBrand
+		return sw
+	}()
+
 	let pinPad = SkyPinPad()
 
 	override func viewDidLoad() {
@@ -35,16 +45,23 @@ final class ViewController: UIViewController {
 
 	@objc private func selectNewCurrency(sender: UIButton) {
 		let viewController = UserGroupViewController()
-		self.present(viewController, animated: true, completion: nil)
+//		self.present(viewController, animated: true, completion: nil)
+		presentPanModal(viewController)
 	}
 
 	private func setupView() {
-		view.addSubview(currencyButton)
+//		view.addSubview(currencyButton)
 		view.addSubview(pinPad)
+		view.addSubview(skySwitch)
 		NSLayoutConstraint.activate([
-			currencyButton.widthAnchor.constraint(equalTo: view.widthAnchor),
-			currencyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-			currencyButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+
+			skySwitch.widthAnchor.constraint(equalTo: view.widthAnchor),
+			skySwitch.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+			skySwitch.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+
+//			currencyButton.widthAnchor.constraint(equalTo: view.widthAnchor),
+//			currencyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//			currencyButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
 
 			pinPad.leadingAnchor.constraint(equalTo: view.leadingAnchor),
 			pinPad.trailingAnchor.constraint(equalTo: view.trailingAnchor),

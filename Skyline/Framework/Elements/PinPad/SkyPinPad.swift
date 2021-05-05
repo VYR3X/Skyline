@@ -74,17 +74,18 @@ public final class SkyPinPad: UIView {
 	private lazy var rightButton = makeAccessoryButton(position: .right)
 
 	///  Конфигурация пинпада
-//	public let g: GPinPadConfiguration<GPinPad>
+	public let sky: SkyPinPadConfiguration<SkyPinPad>
 
 	///  Делегат пинпада
-//	public weak var delegate: GPinPadDelegate?
+	public weak var delegate: SkyPinPadDelegate?
 
 	/// Конструктор
 	/// - Parameters:
 	///   - style: стиль
 	init() {
+		sky = SkyPinPadConfiguration()
 		super.init(frame: .zero)
-//		g.owner = self
+		sky.owner = self
 		self.translatesAutoresizingMaskIntoConstraints = false
 		setupViews()
 	}
@@ -128,9 +129,10 @@ public final class SkyPinPad: UIView {
 		let button = UIButton()
 		configureDigitButton(button)
 		addPressAnimation(to: button)
-		button.makeSquare()
-		let height = button.bounds.height / 2
-		button.layer.cornerRadius = height
+//		button.makeSquare()
+
+//		button.makeSquare(side: 35)
+//		let height = button.bounds.height / 2
 //		button.g.cornerRadius = .circle
 //		button.g.addHandler(for: .touchUpInside) { [weak self] in
 //			guard let self = self, let text = button.g.text else { return }
@@ -233,9 +235,9 @@ public final class SkyPinPad: UIView {
 
 		/// Обработка нажатий с клавиатуры
 		@objc private func handleKeyboardInput(with command: UIKeyCommand) {
-			if let input = command.input {
+//			if let input = command.input {
 //				delegate?.pinPadView(self, didTapDigitButtonWith: input)
-			}
+//			}
 		}
 	#endif
 }
