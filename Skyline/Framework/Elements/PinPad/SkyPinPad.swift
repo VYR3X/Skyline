@@ -58,13 +58,12 @@ public final class SkyPinPad: UIView {
 																digitButtons[0],
 																makeContainer(for: rightButton)])
 
-	private lazy var digitButtons: [UIButton] = {
-		var array = [UIButton]()
+	private lazy var digitButtons: [SkyButton] = {
+		var array = [SkyButton]()
 		for index in 0 ..< 10 {
 			let button = makeDigitButton()
 			button.backgroundColor = .white
-//			button.g.text = String(index)
-//			button.g.voiceOver.id = "GPinPad.Кнопка.\(index)"
+			button.sky.text = String(index)
 			array.append(button)
 		}
 		return array
@@ -119,37 +118,35 @@ public final class SkyPinPad: UIView {
 		return stackView
 	}
 
-	private func configureDigitButton(_ button: UIButton) {
+	private func configureDigitButton(_ button: SkyButton) {
 //		button.g.font = g.digitFont
-//		button.g.textColor = g.digitColor
+		button.sky.textColor = sky.digitColor
 	}
 
-	private func makeDigitButton() -> UIButton {
-		let button = UIButton()
+	private func makeDigitButton() -> SkyButton {
+		let button = SkyButton(skytype: .base)
 		configureDigitButton(button)
 		addPressAnimation(to: button)
-//		button.makeSquare()
-
-//		button.makeSquare(side: 35)
-//		let height = button.bounds.height / 2
+		button.makeSquare()
 //		button.g.cornerRadius = .circle
-//		button.g.addHandler(for: .touchUpInside) { [weak self] in
-//			guard let self = self, let text = button.g.text else { return }
-//			SystemSound.pressClick.play()
-//			self.delegate?.pinPadView(self, didTapDigitButtonWith: text.string)
-//		}
+		button.sky.addHandler(for: .touchUpInside) { [weak self] in
+			guard let self = self, let text = button.sky.text else { return }
+			SystemSound.pressClick.play()
+			self.delegate?.pinPadView(self, didTapDigitButtonWith: text)
+		}
 		return button
 	}
 
-	private func configureAccessoryButton(_ button: UIButton, info: String) {
+	private func configureAccessoryButton(_ button: SkyButton, info: String) {
+		button.sky.text = info
 //		button.isHidden = info.picture == nil
 //		if let picture = info.picture {
 //			button.g.picture = picture
 //		}
 	}
 
-	private func makeAccessoryButton(position: AccessoryButtonPosition) -> UIButton {
-		let button = UIButton()
+	private func makeAccessoryButton(position: AccessoryButtonPosition) -> SkyButton {
+		let button = SkyButton(skytype: .base)
 		addPressAnimation(to: button)
 		// не делаем ее квадратной, потому что она лежит в квадратной вьюхе
 		button.adjustsImageWhenHighlighted = false
@@ -157,38 +154,37 @@ public final class SkyPinPad: UIView {
 		switch position {
 		case .left:
 			print("ff")
-//			configureAccessoryButton(button, info: g.leftButtonInfo)
-//			button.addHandler(for: .touchUpInside) { [weak self] in
-//				guard let self = self else { return }
-//				self.delegate?.pinPadViewDidTapLeftButton(self)
-//			}
+			configureAccessoryButton(button, info: "!")
+			button.sky.addHandler(for: .touchUpInside) { [weak self] in
+				guard let self = self else { return }
+				self.delegate?.pinPadViewDidTapLeftButton(self)
+			}
 		case .right:
 			print("ff")
-//			configureAccessoryButton(button, info: g.rightButtonInfo)
-//			button.g.addHandler(for: .touchUpInside) { [weak self] in
-//				guard let self = self else { return }
-//				SystemSound.pressDelete.play()
-//				self.delegate?.pinPadViewDidTapRightButton(self)
-//			}
+			configureAccessoryButton(button, info:	"?")
+			button.sky.addHandler(for: .touchUpInside) { [weak self] in
+				guard let self = self else { return }
+				SystemSound.pressDelete.play()
+				self.delegate?.pinPadViewDidTapRightButton(self)
+			}
 		}
-
 		return button
 	}
 
-	private func addPressAnimation(to button: UIButton) {
-//		button.g.associate(states: .default) { g in
-//			g.backgroundColor = .clear
-//		}
-//		button.g.associate(states: .pressed) { g in
-//			g.backgroundColor = .onBackgroundQuaternary
-//		}
+	private func addPressAnimation(to button: SkyButton) {
+		button.sky.associate(states: .default) { g in
+			g.backgroundColor = .clear
+		}
+		button.sky.associate(states: .pressed) { g in
+			g.backgroundColor = .onBackgroundQuaternary
+		}
 	}
 
 	private func makeContainer(for view: UIView) -> UIView {
 		let containerView = UIView()
-//		containerView.makeSquare()
+		containerView.makeSquare()
 		containerView.addSubview(view)
-//		view.pinToSuperView()
+		view.pinToSuperView()
 		return containerView
 	}
 
@@ -199,8 +195,8 @@ public final class SkyPinPad: UIView {
 
 	///  Обновить вспомогательные кнопки
 	func updateAccessoryButtons() {
-//		configureAccessoryButton(leftButton, info: g.leftButtonInfo)
-//		configureAccessoryButton(rightButton, info: g.rightButtonInfo)
+		configureAccessoryButton(leftButton, info: "!")
+		configureAccessoryButton(rightButton, info: "?")
 	}
 
 	///  Узнать предпочтительную высоту для конкретной ширины

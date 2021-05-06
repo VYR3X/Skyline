@@ -26,6 +26,7 @@ public final class SkyButton: UIButton {
 	init(type: SkyButtonType? = nil) {
 		sky = SkyButtonConfiguration()
 		super.init(frame: .zero)
+		translatesAutoresizingMaskIntoConstraints = false
 		sky.owner = self
 		if let type = type { apply(type) }
 	}
@@ -35,10 +36,10 @@ public final class SkyButton: UIButton {
 	@available(*, unavailable)
 	public override init(frame: CGRect) { fatalError("init(coder:) has not been implemented") }
 
-//	public override var intrinsicContentSize: CGSize {
-//		let intristicWidth = super.intrinsicContentSize.width
-//		return CGSize(width: intristicWidth, height: g.size.height)
-//	}
+	public override var intrinsicContentSize: CGSize {
+		let intristicWidth = super.intrinsicContentSize.width
+		return CGSize(width: intristicWidth, height: sky.size.height)
+	}
 
 	/// Применить новый тип кнопки
 	///

@@ -50,14 +50,14 @@ public class SkyBaseButtonConfiguration<Type: UIControl, FinalType: AnyObject>: 
 	public override var isEnabled: Bool {
 		didSet {
 			owner?.isEnabled = isEnabled
-//			if isEnabled, stater.state == .disabled {
-//				let isPreviousValid = stater.previousState != .disabled && stater.previousState != .pressed
-//				let target: GControlState = isPreviousValid ? stater.previousState : .default
-//				tryUpdate(to: target)
-//			}
-//			if !isEnabled, stater.state != .disabled {
-//				tryUpdate(to: .disabled)
-//			}
+			if isEnabled, stater.state == .disabled {
+				let isPreviousValid = stater.previousState != .disabled && stater.previousState != .pressed
+				let target: SkyControlState = isPreviousValid ? stater.previousState : .default
+				tryUpdate(to: target)
+			}
+			if !isEnabled, stater.state != .disabled {
+				tryUpdate(to: .disabled)
+			}
 		}
 	}
 

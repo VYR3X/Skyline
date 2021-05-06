@@ -20,13 +20,14 @@
 		012B16D726440CFA004968D9 /* SkyButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16D626440CFA004968D9 /* SkyButtonType.swift */; };
 		012B16DB26440DB3004968D9 /* SkyBaseButtonConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16DA26440DB3004968D9 /* SkyBaseButtonConfiguration.swift */; };
 		012B16E026440E94004968D9 /* SkyStateDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16DF26440E94004968D9 /* SkyStateDecorator.swift */; };
+		012B16ED264478E0004968D9 /* PaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16EC264478E0004968D9 /* PaletteViewController.swift */; };
+		012B16F4264482BC004968D9 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16F3264482BC004968D9 /* ColorCell.swift */; };
 		01C696FE2641A66D007AE440 /* Skyline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C696F42641A66D007AE440 /* Skyline.framework */; };
 		01C697032641A66D007AE440 /* SkylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697022641A66D007AE440 /* SkylineTests.swift */; };
 		01C697052641A66D007AE440 /* Skyline.h in Headers */ = {isa = PBXBuildFile; fileRef = 01C696F72641A66D007AE440 /* Skyline.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01C697172641A6EC007AE440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697162641A6EC007AE440 /* AppDelegate.swift */; };
 		01C697192641A6EC007AE440 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697182641A6EC007AE440 /* SceneDelegate.swift */; };
 		01C6971B2641A6EC007AE440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6971A2641A6EC007AE440 /* ViewController.swift */; };
-		01C6971E2641A6EC007AE440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C6971C2641A6EC007AE440 /* Main.storyboard */; };
 		01C697202641A6F4007AE440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C6971F2641A6F4007AE440 /* Assets.xcassets */; };
 		01C697232641A6F4007AE440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C697212641A6F4007AE440 /* LaunchScreen.storyboard */; };
 		01C697892641ACB1007AE440 /* LightPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697882641ACB1007AE440 /* LightPalette.swift */; };
@@ -103,6 +104,8 @@
 		012B16D626440CFA004968D9 /* SkyButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyButtonType.swift; sourceTree = "<group>"; };
 		012B16DA26440DB3004968D9 /* SkyBaseButtonConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyBaseButtonConfiguration.swift; sourceTree = "<group>"; };
 		012B16DF26440E94004968D9 /* SkyStateDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyStateDecorator.swift; sourceTree = "<group>"; };
+		012B16EC264478E0004968D9 /* PaletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteViewController.swift; sourceTree = "<group>"; };
+		012B16F3264482BC004968D9 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		01C696F42641A66D007AE440 /* Skyline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Skyline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C696F72641A66D007AE440 /* Skyline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Skyline.h; sourceTree = "<group>"; };
 		01C696F82641A66D007AE440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,7 +116,6 @@
 		01C697162641A6EC007AE440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01C697182641A6EC007AE440 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		01C6971A2641A6EC007AE440 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		01C6971D2641A6EC007AE440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01C6971F2641A6F4007AE440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01C697222641A6F4007AE440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01C697242641A6F4007AE440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -206,6 +208,15 @@
 			path = Decorators;
 			sourceTree = "<group>";
 		};
+		012B16F2264482AA004968D9 /* Palette */ = {
+			isa = PBXGroup;
+			children = (
+				012B16EC264478E0004968D9 /* PaletteViewController.swift */,
+				012B16F3264482BC004968D9 /* ColorCell.swift */,
+			);
+			path = Palette;
+			sourceTree = "<group>";
+		};
 		01C696EA2641A66D007AE440 = {
 			isa = PBXGroup;
 			children = (
@@ -253,7 +264,6 @@
 			children = (
 				01C697812641AAB1007AE440 /* Resources */,
 				01C698022641B316007AE440 /* ViewControllers */,
-				01C6971C2641A6EC007AE440 /* Main.storyboard */,
 				01C697162641A6EC007AE440 /* AppDelegate.swift */,
 				01C697182641A6EC007AE440 /* SceneDelegate.swift */,
 				01C697212641A6F4007AE440 /* LaunchScreen.storyboard */,
@@ -463,6 +473,7 @@
 			children = (
 				01C6971A2641A6EC007AE440 /* ViewController.swift */,
 				01C698132641BA59007AE440 /* MainViewController.swift */,
+				012B16F2264482AA004968D9 /* Palette */,
 				01C698032641B32F007AE440 /* PanSections */,
 			);
 			path = ViewControllers;
@@ -640,7 +651,6 @@
 			files = (
 				01C697232641A6F4007AE440 /* LaunchScreen.storyboard in Resources */,
 				01C697202641A6F4007AE440 /* Assets.xcassets in Resources */,
-				01C6971E2641A6EC007AE440 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,7 +710,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				01C6981E2641BAD2007AE440 /* UserGroupHeaderView.swift in Sources */,
+				012B16ED264478E0004968D9 /* PaletteViewController.swift in Sources */,
 				01C698222641BAE6007AE440 /* UserGroupMemberCell.swift in Sources */,
+				012B16F4264482BC004968D9 /* ColorCell.swift in Sources */,
 				01C6971B2641A6EC007AE440 /* ViewController.swift in Sources */,
 				01C6982D2641CB7D007AE440 /* UIView+ex.swift in Sources */,
 				01C697172641A6EC007AE440 /* AppDelegate.swift in Sources */,
@@ -726,14 +738,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		01C6971C2641A6EC007AE440 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01C6971D2641A6EC007AE440 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		01C697212641A6F4007AE440 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

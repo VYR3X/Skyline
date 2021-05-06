@@ -7,19 +7,6 @@
 
 import UIKit
 
-/// Сотояние контрола
-///
-/// - `default`: обычное состояние
-/// - active: активное состояние (например нажатый лайк)
-/// - pressed: нажатое состояние
-/// - disabled: неактивное состояние
-public enum SkyControlState {
-	case `default`
-	case selected
-	case pressed
-	case disabled
-}
-
 /// Типы кнопок
 public enum SkyButtonType {
 	case base

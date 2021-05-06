@@ -35,14 +35,20 @@ final class ViewController: UIViewController {
 		return sw
 	}()
 
-	let button = SkyButton(skytype: .base)
+	let button: SkyButton = {
+		let button = SkyButton(skytype: .primary(size: .large))
+//		let button = SkyButton(skytype: .text)
+		button.sky.text = "Кнопка"
+		button.sky.textColor = .backgroundDefault
+		button.sky.backgroundColor = .generalBrand
+		return button
+	}()
 
 	let pinPad = SkyPinPad()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = .systemBlue
-//		button.backgroundColor = .green
 		setupView()
 	}
 
@@ -55,20 +61,21 @@ final class ViewController: UIViewController {
 	private func setupView() {
 //		view.addSubview(currencyButton)
 		view.addSubview(pinPad)
-		view.addSubview(skySwitch)
+		view.addSubview(button)
 		NSLayoutConstraint.activate([
 
-			skySwitch.widthAnchor.constraint(equalTo: view.widthAnchor),
-			skySwitch.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-			skySwitch.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+//			button.heightAnchor.constraint(equalToConstant: 30),
+			button.widthAnchor.constraint(equalTo: view.widthAnchor),
+			button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+			button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
 
 //			currencyButton.widthAnchor.constraint(equalTo: view.widthAnchor),
 //			currencyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 //			currencyButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
 
-			pinPad.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-			pinPad.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-			pinPad.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+			pinPad.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+			pinPad.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+			pinPad.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
 		])
 	}
 }

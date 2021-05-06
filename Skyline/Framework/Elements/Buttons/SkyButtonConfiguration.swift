@@ -8,7 +8,7 @@
 import UIKit
 
 /// Конфигурация кнопки кварками
-public final class SkyButtonConfiguration<Type: UIButton>: SkyBaseButtonConfiguration<Type, SkyButtonConfiguration> {
+public final class SkyButtonConfiguration<Type: UIButton>: SkyBaseButtonConfiguration<Type, SkyButtonConfiguration>, Statable {
 
 	/// Картинка, которую нужно отобразить
 	public var picture: UIImage? {
@@ -22,8 +22,8 @@ public final class SkyButtonConfiguration<Type: UIButton>: SkyBaseButtonConfigur
 //			case let .icon(_, color):
 //				tintColor = color
 //			}
-//			owner?.setImage(picture.image, for: .normal)
-//			updateInsets()
+			owner?.setImage(picture, for: .normal)
+			updateInsets()
 		}
 	}
 
@@ -85,9 +85,10 @@ public final class SkyButtonConfiguration<Type: UIButton>: SkyBaseButtonConfigur
 		}
 	}
 
+	/// устанавливаем стартер для конфига кнопки
 	init() {
 		super.init(stater: SkyStateDecorator(state: .default))
-		stater.g = self
+		stater.sky = self
 	}
 
 //	public override func styleDidChange(options: UpdateOptions) {
@@ -118,11 +119,10 @@ public final class SkyButtonConfiguration<Type: UIButton>: SkyBaseButtonConfigur
 			owner?.setAttributedTitle(nil, for: .normal)
 			return
 		}
-//		let attributes: [NSAttributedString.Key: Any] = [.font: style.typography.font(font).font,
-//														 .foregroundColor: style.palette.color(textColor)]
-//		let attributedString = NSAttributedString(string: text.string, attributes: attributes)
+		let attributes: [NSAttributedString.Key: Any] = [.foregroundColor: LightPalette().color(textColor)]
+		let attributedString = NSAttributedString(string: text, attributes: attributes)
 
-//		owner?.setAttributedTitle(attributedString, for: .normal)
+		owner?.setAttributedTitle(attributedString, for: .normal)
 	}
 
 	private func updateInsets() {
@@ -145,16 +145,17 @@ public final class SkyButtonConfiguration<Type: UIButton>: SkyBaseButtonConfigur
 													left: insets.left,
 													bottom: insets.bottom,
 													right: insets.right) // + gapValue
-//			titleInsets = UIEdgeInsets(top: 0, left: <#T##CGFloat#>, bottom: 0, right: <#T##CGFloat#>)
+			titleInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+			owner?.titleEdgeInsets = titleInsets
 		case .trailing:
 			owner?.contentEdgeInsets = UIEdgeInsets(top: insets.top,
 													left: insets.left, // + gapValue
 													bottom: insets.bottom,
 													right: insets.right)
 //			titleInsets = GInsets(left: -gapValue, right: gapValue)
+			titleInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+			owner?.titleEdgeInsets = titleInsets
 		}
-
 //		owner?.titleEdgeInsets = titleInsets 
 	}
 }
-

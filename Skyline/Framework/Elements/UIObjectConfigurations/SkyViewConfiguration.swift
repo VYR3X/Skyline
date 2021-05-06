@@ -27,6 +27,15 @@ public class SkyViewConfiguration<Type: UIView>: SkyConfiguration<Type> {
 		}
 	}
 
+	/// Радиус закругления
+	public var cornerRadius: CGFloat = .zero {
+		didSet {
+//			let radius = style.radii.radius(cornerRadius, size: owner?.frame.size ?? .zero)
+			owner?.layer.cornerRadius = cornerRadius
+//			overlay.viewCornerRadiusDidChange()
+		}
+	}
+
 	/// Толщина обводки
 	public var borderWidth: CGFloat = 0 {
 		didSet {

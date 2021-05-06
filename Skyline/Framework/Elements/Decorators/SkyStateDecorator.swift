@@ -5,6 +5,8 @@
 //  Created by 17790204 on 06.05.2021.
 //
 
+import UIKit
+
 /// Тип ассоциирования действия и состояния объекта
 ///
 /// - add: действие добавляется к ранее ассоциированным действиям
@@ -14,6 +16,52 @@ public enum AssociationType {
 	case clear
 }
 
+/// Протокол описывающий объект, обладающий состояниями
+public protocol Statable: AnyObject {
+
+	/// Тип состояний объекта
+	associatedtype StateType: Hashable
+
+	/// Декоратор состояний
+	var stater: SkyStateDecorator<Self, StateType> { get }
+
+	/// Ассоциировать состояние с действием
+	///
+	/// - Parameters:
+	///   - state: Состояние объекта
+	///   - action: Действие, выполняющимся при переходе в это состояние
+	func associate(states: StateType...,
+					type: AssociationType,
+					with action: @escaping ((_ g: Self) -> Void))
+
+	/// Обновить состояние объекта
+	///
+	/// - Parameter state: состояние, до которого нужно обновить
+	/// - Parameter animated: производить ли обновление анимированно
+	func update(to state: StateType, animated: Bool)
+
+	/// Удалить все ассоциации
+	func removeAllAssociations()
+}
+
+// MARK: - Дефолтоное проксирование методов
+public extension Statable {
+
+	func associate(states: StateType...,
+		type: AssociationType = .add,
+		with action: @escaping ((_ g: Self) -> Void)) {
+		stater.associate(states: states, type: type, with: action)
+	}
+
+	func update(to state: StateType, animated: Bool) {
+		stater.update(to: state, animated: animated)
+	}
+
+	func removeAllAssociations() {
+		stater.removeAllAssociations()
+	}
+}
+
 /// Декоратор состояний объекта
 public final class SkyStateDecorator<ConfigurationType: AnyObject, StateType: Hashable> {
 
@@ -21,7 +69,7 @@ public final class SkyStateDecorator<ConfigurationType: AnyObject, StateType: Ha
 	public var animationDuration: Double = 0.15
 
 	/// Конфигурация объекта
-	weak var g: ConfigurationType?
+	weak var sky: ConfigurationType?
 
 	/// Текущее состояние
 	private(set) var state: StateType
@@ -92,16 +140,16 @@ public final class SkyStateDecorator<ConfigurationType: AnyObject, StateType: Ha
 	}
 
 	private func performActions(for state: StateType, animated: Bool) {
-		guard let g = g, let actions = statePairs[state] else { return }
+		guard let sky = sky, let actions = statePairs[state] else { return }
 		let duration = animated ? animationDuration : 0
-//		GView.animate(withDuration: duration,
-//					   delay: .zero,
-//					   options: [.allowUserInteraction, .curveEaseInOut],
-//					   animations: {
-//						for action in actions {
-//							action(g)
-//						}
-//		})
+		UIView.animate(withDuration: duration,
+					   delay: .zero,
+					   options: [.allowUserInteraction, .curveEaseInOut],
+					   animations: {
+						for action in actions {
+							action(sky)
+						}
+		})
 	}
 }
 
