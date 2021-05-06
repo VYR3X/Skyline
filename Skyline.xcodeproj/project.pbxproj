@@ -14,6 +14,12 @@
 		012B16BC2642B57A004968D9 /* SkyControlConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16BB2642B57A004968D9 /* SkyControlConfiguration.swift */; };
 		012B16C02642C40C004968D9 /* SkyPinPadConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16BF2642C40C004968D9 /* SkyPinPadConfiguration.swift */; };
 		012B16C42642C4D7004968D9 /* SkyPinPadDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16C32642C4D7004968D9 /* SkyPinPadDelegate.swift */; };
+		012B16C926440C57004968D9 /* ButtonDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16C826440C57004968D9 /* ButtonDescriptor.swift */; };
+		012B16CF26440C74004968D9 /* SkyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16CE26440C74004968D9 /* SkyButton.swift */; };
+		012B16D326440CAD004968D9 /* SkyButtonConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16D226440CAD004968D9 /* SkyButtonConfiguration.swift */; };
+		012B16D726440CFA004968D9 /* SkyButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16D626440CFA004968D9 /* SkyButtonType.swift */; };
+		012B16DB26440DB3004968D9 /* SkyBaseButtonConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16DA26440DB3004968D9 /* SkyBaseButtonConfiguration.swift */; };
+		012B16E026440E94004968D9 /* SkyStateDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16DF26440E94004968D9 /* SkyStateDecorator.swift */; };
 		01C696FE2641A66D007AE440 /* Skyline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C696F42641A66D007AE440 /* Skyline.framework */; };
 		01C697032641A66D007AE440 /* SkylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697022641A66D007AE440 /* SkylineTests.swift */; };
 		01C697052641A66D007AE440 /* Skyline.h in Headers */ = {isa = PBXBuildFile; fileRef = 01C696F72641A66D007AE440 /* Skyline.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -91,6 +97,12 @@
 		012B16BB2642B57A004968D9 /* SkyControlConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyControlConfiguration.swift; sourceTree = "<group>"; };
 		012B16BF2642C40C004968D9 /* SkyPinPadConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyPinPadConfiguration.swift; sourceTree = "<group>"; };
 		012B16C32642C4D7004968D9 /* SkyPinPadDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyPinPadDelegate.swift; sourceTree = "<group>"; };
+		012B16C826440C57004968D9 /* ButtonDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDescriptor.swift; sourceTree = "<group>"; };
+		012B16CE26440C74004968D9 /* SkyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyButton.swift; sourceTree = "<group>"; };
+		012B16D226440CAD004968D9 /* SkyButtonConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyButtonConfiguration.swift; sourceTree = "<group>"; };
+		012B16D626440CFA004968D9 /* SkyButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyButtonType.swift; sourceTree = "<group>"; };
+		012B16DA26440DB3004968D9 /* SkyBaseButtonConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyBaseButtonConfiguration.swift; sourceTree = "<group>"; };
+		012B16DF26440E94004968D9 /* SkyStateDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyStateDecorator.swift; sourceTree = "<group>"; };
 		01C696F42641A66D007AE440 /* Skyline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Skyline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C696F72641A66D007AE440 /* Skyline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Skyline.h; sourceTree = "<group>"; };
 		01C696F82641A66D007AE440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,8 +185,25 @@
 			children = (
 				012B16B72642B467004968D9 /* SkyViewConfiguration.swift */,
 				012B16BB2642B57A004968D9 /* SkyControlConfiguration.swift */,
+				012B16DA26440DB3004968D9 /* SkyBaseButtonConfiguration.swift */,
 			);
 			path = UIObjectConfigurations;
+			sourceTree = "<group>";
+		};
+		012B16C726440C3F004968D9 /* Descriptor */ = {
+			isa = PBXGroup;
+			children = (
+				012B16C826440C57004968D9 /* ButtonDescriptor.swift */,
+			);
+			path = Descriptor;
+			sourceTree = "<group>";
+		};
+		012B16DE26440E87004968D9 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				012B16DF26440E94004968D9 /* SkyStateDecorator.swift */,
+			);
+			path = Decorators;
 			sourceTree = "<group>";
 		};
 		01C696EA2641A66D007AE440 = {
@@ -288,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				012B169F2642AE1F004968D9 /* SkyConfiguration.swift */,
+				012B16DE26440E87004968D9 /* Decorators */,
 				012B16B62642B3CF004968D9 /* UIObjectConfigurations */,
 				01C697AE2641AFBF007AE440 /* PanModel */,
 				01C697AC2641AF17007AE440 /* NavigationBar */,
@@ -331,6 +361,10 @@
 		01C697AA2641AEDA007AE440 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				012B16D626440CFA004968D9 /* SkyButtonType.swift */,
+				012B16C726440C3F004968D9 /* Descriptor */,
+				012B16CE26440C74004968D9 /* SkyButton.swift */,
+				012B16D226440CAD004968D9 /* SkyButtonConfiguration.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -617,7 +651,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012B16D326440CAD004968D9 /* SkyButtonConfiguration.swift in Sources */,
 				01C697A32641AE40007AE440 /* SkySeparatorView.swift in Sources */,
+				012B16DB26440DB3004968D9 /* SkyBaseButtonConfiguration.swift in Sources */,
 				01C697DA2641B226007AE440 /* PanModalPresentable.swift in Sources */,
 				01C697FE2641B29F007AE440 /* PanContainerView.swift in Sources */,
 				01C697932641ACF6007AE440 /* Palette.swift in Sources */,
@@ -628,7 +664,9 @@
 				01C697E42641B258007AE440 /* PanModalPresentable+UIViewController.swift in Sources */,
 				01C697EF2641B26F007AE440 /* PanModalPresenter.swift in Sources */,
 				01C698262641C1DF007AE440 /* SkyPinPad.swift in Sources */,
+				012B16CF26440C74004968D9 /* SkyButton.swift in Sources */,
 				012B16C42642C4D7004968D9 /* SkyPinPadDelegate.swift in Sources */,
+				012B16C926440C57004968D9 /* ButtonDescriptor.swift in Sources */,
 				01C697D02641B1F9007AE440 /* PanModalHeight.swift in Sources */,
 				01C697F42641B27F007AE440 /* UIViewController+PanModalPresenterProtocol.swift in Sources */,
 				01C697CB2641B1E9007AE440 /* PanModalPresentationDelegate.swift in Sources */,
@@ -639,9 +677,11 @@
 				01C697DF2641B23B007AE440 /* PanModalPresentable+Defaults.swift in Sources */,
 				01C698102641B555007AE440 /* UIColor+hex.swift in Sources */,
 				012B16B32642B23F004968D9 /* SkySwitchConfiguration.swift in Sources */,
+				012B16E026440E94004968D9 /* SkyStateDecorator.swift in Sources */,
 				01C697F92641B290007AE440 /* DimmedView.swift in Sources */,
 				012B16A02642AE1F004968D9 /* SkyConfiguration.swift in Sources */,
 				01C6978E2641ACC5007AE440 /* DarkPalette.swift in Sources */,
+				012B16D726440CFA004968D9 /* SkyButtonType.swift in Sources */,
 				012B16BC2642B57A004968D9 /* SkyControlConfiguration.swift in Sources */,
 				012B16B82642B467004968D9 /* SkyViewConfiguration.swift in Sources */,
 			);

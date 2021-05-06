@@ -81,7 +81,6 @@ public final class SkyPinPad: UIView {
 
 	/// Конструктор
 	/// - Parameters:
-	///   - style: стиль
 	init() {
 		sky = SkyPinPadConfiguration()
 		super.init(frame: .zero)

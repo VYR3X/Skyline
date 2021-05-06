@@ -35,11 +35,14 @@ final class ViewController: UIViewController {
 		return sw
 	}()
 
+	let button = SkyButton(skytype: .base)
+
 	let pinPad = SkyPinPad()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = .systemBlue
+//		button.backgroundColor = .green
 		setupView()
 	}
 
