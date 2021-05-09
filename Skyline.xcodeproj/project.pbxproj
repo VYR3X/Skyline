@@ -22,7 +22,6 @@
 		012B16E026440E94004968D9 /* SkyStateDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16DF26440E94004968D9 /* SkyStateDecorator.swift */; };
 		012B16ED264478E0004968D9 /* PaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16EC264478E0004968D9 /* PaletteViewController.swift */; };
 		012B16F4264482BC004968D9 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16F3264482BC004968D9 /* ColorCell.swift */; };
-		012B1724264801C3004968D9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 012B1723264801C3004968D9 /* .gitignore */; };
 		01C696FE2641A66D007AE440 /* Skyline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C696F42641A66D007AE440 /* Skyline.framework */; };
 		01C697032641A66D007AE440 /* SkylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697022641A66D007AE440 /* SkylineTests.swift */; };
 		01C697052641A66D007AE440 /* Skyline.h in Headers */ = {isa = PBXBuildFile; fileRef = 01C696F72641A66D007AE440 /* Skyline.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -106,7 +105,6 @@
 		012B16DF26440E94004968D9 /* SkyStateDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyStateDecorator.swift; sourceTree = "<group>"; };
 		012B16EC264478E0004968D9 /* PaletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteViewController.swift; sourceTree = "<group>"; };
 		012B16F3264482BC004968D9 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
-		012B1723264801C3004968D9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		01C696F42641A66D007AE440 /* Skyline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Skyline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C696F72641A66D007AE440 /* Skyline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Skyline.h; sourceTree = "<group>"; };
 		01C696F82641A66D007AE440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 		01C696EA2641A66D007AE440 = {
 			isa = PBXGroup;
 			children = (
-				012B1723264801C3004968D9 /* .gitignore */,
 				01C696F62641A66D007AE440 /* Skyline */,
 				01C697012641A66D007AE440 /* SkylineTests */,
 				01C697152641A6EC007AE440 /* DesignSystemExample */,
@@ -635,7 +632,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				012B1724264801C3004968D9 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
