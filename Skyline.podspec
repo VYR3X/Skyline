@@ -91,7 +91,7 @@ Pod::Spec.new do |spec|
 
   # spec.source_files  = "Classes", "Classes/**/*.{h,m, swift}"
   # spec.source_files  = "Skyline/**/*.{h,m,swift}"
-  spec.source_files  = 'Skyline/*.{swift,plist}'
+  spec.source_files  = 'Skyline/*.{swift}'
   # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
