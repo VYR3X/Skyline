@@ -245,7 +245,7 @@ public extension UIView {
 	/// - Parameters:
 	///   - inset:  отступ
 	func pinToSuperView(inset: CGFloat = 0.0) {
-		pinToSuperView(insets: UIEdgeInsets(top: inset,
+		pinToView(insets: UIEdgeInsets(top: inset,
 									   left: inset,
 									   bottom: inset,
 									   right: inset))
@@ -255,7 +255,7 @@ public extension UIView {
 	///
 	/// - Parameters:
 	///   - insets:  отступы
-	func pinToSuperView(insets: UIEdgeInsets) {
+	func pinToView(insets: UIEdgeInsets) {
 
 		guard let superview = superview else { return }
 
