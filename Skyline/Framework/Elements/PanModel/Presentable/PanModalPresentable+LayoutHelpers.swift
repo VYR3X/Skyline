@@ -113,7 +113,7 @@ extension PanModalPresentable where Self: UIViewController {
 		guard let application = UIApplication.value(forKeyPath: #keyPath(UIApplication.shared)) as? UIApplication
 			else { return nil }
 
-		return application.keyWindow?.rootViewController
+		return application.windows.filter { $0.isKeyWindow }.first?.rootViewController
 	}
 
 }
