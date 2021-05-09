@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "Skyline"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of Skyline."
+  spec.summary      = "A CocoaPods library written in Swift"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,9 +25,10 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+  This CocoaPods library helps you create beautiful UI.
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/Skyline"
+  spec.homepage     = "https://github.com/Vladislav-Zhokhov/Skyline"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,8 +39,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -52,7 +52,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "Жохов Владислав Владимирович" => "vladislav.zhokhov@gmail.com" }
+  spec.author             = { "VYREX" => "vladislav.zhokhov@gmail.com" }
   # Or just: spec.author    = "Жохов Владислав Владимирович"
   # spec.authors            = { "Жохов Владислав Владимирович" => "Zhokhov.V.V@sberbank.ru" }
   # spec.social_media_url   = "https://twitter.com/Жохов Владислав Владимирович"
@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/Skyline.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/Vladislav-Zhokhov/Skyline.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +90,9 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  spec.source_files  = "Skyline/**/*.{h,m,swift}"
+  # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
