@@ -14,7 +14,7 @@ public enum SkyButtonType {
 	case secondary(size: SkyButtonSize)
 	case floating
 	case text
-	case clear(icon: UIImage?, color: Color)
+//	case clear(icon: UIImage?, color: Color)
 	case check
 	case radio
 	case custom(descriptor: ButtonDescriptor)
@@ -26,7 +26,7 @@ public enum SkyButtonType {
 		case let .secondary(size): return SecondaryButtonDescriptor(size: size)
 		case .text: return TextButtonDescriptor()
 		case .floating: return FloatingButtonDescriptor(size: .large)
-		case .clear(let (icon, color)): return ClearButtonDescriptor(icon: icon, color: color)
+//		case .clear(let (icon, color)): return ClearButtonDescriptor(icon: icon, color: color)
 		case .check: return CheckButtonDescriptor()
 		case .radio: return RadioButtonDescriptor()
 		case let .custom(descriptor): return descriptor

@@ -100,7 +100,7 @@ public class SkyViewConfiguration<Type: UIView>: SkyConfiguration<Type> {
 	public var transitionId: String?
 
 	override func configureOwner() {
-		guard let owner = owner else { return }
+//		guard let owner = owner else { return }
 		super.configureOwner()
 	}
 

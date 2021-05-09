@@ -194,7 +194,7 @@ struct ClearButtonDescriptor: ButtonDescriptor {
 		button.sky.backgroundColor = .clear
 //		button.sky.picture = button.g.album.optionalIcon(icon, color: color)
 		button.sky.removeAllAssociations()
-		button.sky.associate(states: .default) { [color] g in
+		button.sky.associate(states: .default) { g in
 //			g.picture?.repaint(to: color)
 			g.isEnabled = true
 		}
