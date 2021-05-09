@@ -1,7 +1,22 @@
-# Xcode
-#
+# file
 
+#########################################################################
+#                                                                       #
+#       Title         - .gitignore file                                 #
+#       For           - Mac OS X, Xcode 12 and Swift Source projects    #
+#       Updated by    - Vladislav Zhokhov                               #
+#       Updated on    - 9 - May - 2021                                  #
+#                                                                       #
+#########################################################################
+
+########### Xcode ###########
+# Xcode temporary files that should never be committed
+
+## Build generated
 build/
+DerivedData
+
+## Various settings
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -11,9 +26,10 @@ build/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata
+
+## Other
 *.xccheckout
 *.moved-aside
-DerivedData
-*.hmap
-*.ipa
 *.xcuserstate
+*.xcscmblueprint
+*.xcscheme
