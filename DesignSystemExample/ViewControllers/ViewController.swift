@@ -35,6 +35,17 @@ final class ViewController: UIViewController {
 		return sw
 	}()
 
+	let skyImagesPackView: SkyImagesPackView = {
+		let imagesPack = SkyImagesPackView()
+		imagesPack.sky.imageSide = 44
+//		imagesPack.g.imagesOverlay = 12
+		let sampleImage = UIImage()
+//		imagesPack.g.plusCounterValue = 3
+		imagesPack.setContentCompressionResistancePriority(.required, for: .horizontal)
+		return imagesPack
+	}()
+
+
 	let button: SkyButton = {
 		let button = SkyButton(skytype: .primary(size: .large))
 //		let button = SkyButton(skytype: .text)

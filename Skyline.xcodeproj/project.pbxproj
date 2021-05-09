@@ -32,6 +32,8 @@
 		017CED5426486C9A00669BA9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017CED5326486C9A00669BA9 /* ProfileViewController.swift */; };
 		017CED5926486D2F00669BA9 /* UserGroupStackedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017CED5826486D2F00669BA9 /* UserGroupStackedViewController.swift */; };
 		017CED5D26486D3C00669BA9 /* StackedProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017CED5C26486D3C00669BA9 /* StackedProfileViewController.swift */; };
+		017CEDE426489F9B00669BA9 /* SkyImagesPackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017CEDE326489F9B00669BA9 /* SkyImagesPackView.swift */; };
+		017CEDE826489FD200669BA9 /* SkyImagesPackViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017CEDE726489FD200669BA9 /* SkyImagesPackViewConfiguration.swift */; };
 		01C696FE2641A66D007AE440 /* Skyline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C696F42641A66D007AE440 /* Skyline.framework */; };
 		01C697032641A66D007AE440 /* SkylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697022641A66D007AE440 /* SkylineTests.swift */; };
 		01C697052641A66D007AE440 /* Skyline.h in Headers */ = {isa = PBXBuildFile; fileRef = 01C696F72641A66D007AE440 /* Skyline.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -125,6 +127,8 @@
 		017CED5326486C9A00669BA9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		017CED5826486D2F00669BA9 /* UserGroupStackedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupStackedViewController.swift; sourceTree = "<group>"; };
 		017CED5C26486D3C00669BA9 /* StackedProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedProfileViewController.swift; sourceTree = "<group>"; };
+		017CEDE326489F9B00669BA9 /* SkyImagesPackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyImagesPackView.swift; sourceTree = "<group>"; };
+		017CEDE726489FD200669BA9 /* SkyImagesPackViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyImagesPackViewConfiguration.swift; sourceTree = "<group>"; };
 		01C696F42641A66D007AE440 /* Skyline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Skyline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C696F72641A66D007AE440 /* Skyline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Skyline.h; sourceTree = "<group>"; };
 		01C696F82641A66D007AE440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -286,6 +290,15 @@
 			path = "User Groups (Stacked)";
 			sourceTree = "<group>";
 		};
+		017CEDE026489F8200669BA9 /* ImagesPac */ = {
+			isa = PBXGroup;
+			children = (
+				017CEDE326489F9B00669BA9 /* SkyImagesPackView.swift */,
+				017CEDE726489FD200669BA9 /* SkyImagesPackViewConfiguration.swift */,
+			);
+			path = ImagesPac;
+			sourceTree = "<group>";
+		};
 		01C696EA2641A66D007AE440 = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +414,7 @@
 				01C697AE2641AFBF007AE440 /* PanModel */,
 				01C697AC2641AF17007AE440 /* NavigationBar */,
 				01C697AB2641AF00007AE440 /* ImageView */,
+				017CEDE026489F8200669BA9 /* ImagesPac */,
 				01C697AA2641AEDA007AE440 /* Buttons */,
 				012B16AD2642B1ED004968D9 /* Switch */,
 				01C697A12641AE1E007AE440 /* Separator */,
@@ -762,7 +776,9 @@
 				01C697B92641B196007AE440 /* PanModalAnimator.swift in Sources */,
 				01C697DF2641B23B007AE440 /* PanModalPresentable+Defaults.swift in Sources */,
 				01C698102641B555007AE440 /* UIColor+hex.swift in Sources */,
+				017CEDE826489FD200669BA9 /* SkyImagesPackViewConfiguration.swift in Sources */,
 				012B16B32642B23F004968D9 /* SkySwitchConfiguration.swift in Sources */,
+				017CEDE426489F9B00669BA9 /* SkyImagesPackView.swift in Sources */,
 				012B16E026440E94004968D9 /* SkyStateDecorator.swift in Sources */,
 				01C697F92641B290007AE440 /* DimmedView.swift in Sources */,
 				012B16A02642AE1F004968D9 /* SkyConfiguration.swift in Sources */,
