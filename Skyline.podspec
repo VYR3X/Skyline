@@ -53,9 +53,6 @@ Pod::Spec.new do |spec|
   #
 
   spec.author             = { "VYREX" => "vladislav.zhokhov@gmail.com" }
-  # Or just: spec.author    = "Жохов Владислав Владимирович"
-  # spec.authors            = { "Жохов Владислав Владимирович" => "Zhokhov.V.V@sberbank.ru" }
-  # spec.social_media_url   = "https://twitter.com/Жохов Владислав Владимирович"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -93,7 +90,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.source_files  = "Skyline/**/*.{h,m,swift}"
+  spec.source_files  = "Skyline/**/*.{h,m,swift,gitignore}"
   # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
