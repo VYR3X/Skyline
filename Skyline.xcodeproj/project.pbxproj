@@ -23,6 +23,15 @@
 		012B16ED264478E0004968D9 /* PaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16EC264478E0004968D9 /* PaletteViewController.swift */; };
 		012B16F4264482BC004968D9 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B16F3264482BC004968D9 /* ColorCell.swift */; };
 		012B172C2648123E004968D9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B172B2648123E004968D9 /* UIViewExtension.swift */; };
+		017CED3426486BBC00669BA9 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017CED3326486BBC00669BA9 /* BasicViewController.swift */; };
+		017CED3E26486C2A00669BA9 /* FullScreenNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017CED3D26486C2A00669BA9 /* FullScreenNavController.swift */; };
+		017CED4426486C4300669BA9 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017CED4326486C4300669BA9 /* AlertViewController.swift */; };
+		017CED4826486C5300669BA9 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017CED4726486C5300669BA9 /* AlertView.swift */; };
+		017CED4C26486C6C00669BA9 /* TransientAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017CED4B26486C6C00669BA9 /* TransientAlertViewController.swift */; };
+		017CED5026486C8800669BA9 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017CED4F26486C8800669BA9 /* NavigationController.swift */; };
+		017CED5426486C9A00669BA9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017CED5326486C9A00669BA9 /* ProfileViewController.swift */; };
+		017CED5926486D2F00669BA9 /* UserGroupStackedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017CED5826486D2F00669BA9 /* UserGroupStackedViewController.swift */; };
+		017CED5D26486D3C00669BA9 /* StackedProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017CED5C26486D3C00669BA9 /* StackedProfileViewController.swift */; };
 		01C696FE2641A66D007AE440 /* Skyline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C696F42641A66D007AE440 /* Skyline.framework */; };
 		01C697032641A66D007AE440 /* SkylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C697022641A66D007AE440 /* SkylineTests.swift */; };
 		01C697052641A66D007AE440 /* Skyline.h in Headers */ = {isa = PBXBuildFile; fileRef = 01C696F72641A66D007AE440 /* Skyline.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -107,6 +116,15 @@
 		012B16EC264478E0004968D9 /* PaletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteViewController.swift; sourceTree = "<group>"; };
 		012B16F3264482BC004968D9 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		012B172B2648123E004968D9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		017CED3326486BBC00669BA9 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
+		017CED3D26486C2A00669BA9 /* FullScreenNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenNavController.swift; sourceTree = "<group>"; };
+		017CED4326486C4300669BA9 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		017CED4726486C5300669BA9 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		017CED4B26486C6C00669BA9 /* TransientAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransientAlertViewController.swift; sourceTree = "<group>"; };
+		017CED4F26486C8800669BA9 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		017CED5326486C9A00669BA9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		017CED5826486D2F00669BA9 /* UserGroupStackedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupStackedViewController.swift; sourceTree = "<group>"; };
+		017CED5C26486D3C00669BA9 /* StackedProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedProfileViewController.swift; sourceTree = "<group>"; };
 		01C696F42641A66D007AE440 /* Skyline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Skyline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C696F72641A66D007AE440 /* Skyline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Skyline.h; sourceTree = "<group>"; };
 		01C696F82641A66D007AE440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -215,6 +233,57 @@
 				012B16F3264482BC004968D9 /* ColorCell.swift */,
 			);
 			path = Palette;
+			sourceTree = "<group>";
+		};
+		017CED3226486BAA00669BA9 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				017CED3326486BBC00669BA9 /* BasicViewController.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		017CED3926486BDB00669BA9 /* Full Screen */ = {
+			isa = PBXGroup;
+			children = (
+				017CED3D26486C2A00669BA9 /* FullScreenNavController.swift */,
+			);
+			path = "Full Screen";
+			sourceTree = "<group>";
+		};
+		017CED3A26486BEA00669BA9 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				017CED4326486C4300669BA9 /* AlertViewController.swift */,
+				017CED4726486C5300669BA9 /* AlertView.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		017CED3B26486BF500669BA9 /* Alert (Transient) */ = {
+			isa = PBXGroup;
+			children = (
+				017CED4B26486C6C00669BA9 /* TransientAlertViewController.swift */,
+			);
+			path = "Alert (Transient)";
+			sourceTree = "<group>";
+		};
+		017CED3C26486C0700669BA9 /* User Groups (Navigation Controller) */ = {
+			isa = PBXGroup;
+			children = (
+				017CED4F26486C8800669BA9 /* NavigationController.swift */,
+				017CED5326486C9A00669BA9 /* ProfileViewController.swift */,
+			);
+			path = "User Groups (Navigation Controller)";
+			sourceTree = "<group>";
+		};
+		017CED5726486D1900669BA9 /* User Groups (Stacked) */ = {
+			isa = PBXGroup;
+			children = (
+				017CED5826486D2F00669BA9 /* UserGroupStackedViewController.swift */,
+				017CED5C26486D3C00669BA9 /* StackedProfileViewController.swift */,
+			);
+			path = "User Groups (Stacked)";
 			sourceTree = "<group>";
 		};
 		01C696EA2641A66D007AE440 = {
@@ -482,6 +551,12 @@
 		01C698032641B32F007AE440 /* PanSections */ = {
 			isa = PBXGroup;
 			children = (
+				017CED3226486BAA00669BA9 /* Basic */,
+				017CED3926486BDB00669BA9 /* Full Screen */,
+				017CED3A26486BEA00669BA9 /* Alert */,
+				017CED3B26486BF500669BA9 /* Alert (Transient) */,
+				017CED5726486D1900669BA9 /* User Groups (Stacked) */,
+				017CED3C26486C0700669BA9 /* User Groups (Navigation Controller) */,
 				01C698172641BA7C007AE440 /* UserGroup */,
 			);
 			path = PanSections;
@@ -711,12 +786,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				01C6981E2641BAD2007AE440 /* UserGroupHeaderView.swift in Sources */,
+				017CED3426486BBC00669BA9 /* BasicViewController.swift in Sources */,
 				012B16ED264478E0004968D9 /* PaletteViewController.swift in Sources */,
 				01C698222641BAE6007AE440 /* UserGroupMemberCell.swift in Sources */,
 				012B16F4264482BC004968D9 /* ColorCell.swift in Sources */,
 				01C6971B2641A6EC007AE440 /* ViewController.swift in Sources */,
+				017CED5426486C9A00669BA9 /* ProfileViewController.swift in Sources */,
+				017CED4C26486C6C00669BA9 /* TransientAlertViewController.swift in Sources */,
+				017CED5026486C8800669BA9 /* NavigationController.swift in Sources */,
 				01C697172641A6EC007AE440 /* AppDelegate.swift in Sources */,
+				017CED5D26486D3C00669BA9 /* StackedProfileViewController.swift in Sources */,
+				017CED4426486C4300669BA9 /* AlertViewController.swift in Sources */,
+				017CED4826486C5300669BA9 /* AlertView.swift in Sources */,
+				017CED5926486D2F00669BA9 /* UserGroupStackedViewController.swift in Sources */,
 				01C697192641A6EC007AE440 /* SceneDelegate.swift in Sources */,
+				017CED3E26486C2A00669BA9 /* FullScreenNavController.swift in Sources */,
 				01C698142641BA59007AE440 /* MainViewController.swift in Sources */,
 				01C698192641BA8D007AE440 /* UserGroupViewController.swift in Sources */,
 			);
