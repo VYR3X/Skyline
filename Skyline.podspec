@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "Skyline"
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.4"
   spec.summary      = "A CocoaPods library written in Swift"
 
   # This description is used to generate tags and improve search results.
@@ -64,7 +64,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
-  spec.ios.deployment_target = "12.0"
+  spec.ios.deployment_target = "8.0"
   spec.swift_version = "5.0"
   # spec.ios.deployment_target = "5.0"
   # spec.osx.deployment_target = "10.7"
