@@ -75,7 +75,7 @@ final class PaletteViewController: UITableViewController {
 
 	func setupTableView() {
 		tableView.separatorStyle = .none
-		tableView.backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+		tableView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 		tableView.register(ColorCell.self, forCellReuseIdentifier: "cell")
 	}
 

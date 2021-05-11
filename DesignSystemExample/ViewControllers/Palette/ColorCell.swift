@@ -23,12 +23,13 @@ final class ColorCell: UITableViewCell {
 	let avatarView: UIView = {
 		let view = UIView()
 		view.layer.cornerRadius = 8.0
+		view.layer.borderWidth = 0.2
 		return view
 	}()
 
 	let nameLabel: UILabel = {
 		let label = UILabel()
-		label.textColor = #colorLiteral(red: 0.8196078431, green: 0.8235294118, blue: 0.8274509804, alpha: 1)
+		label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
 		label.font = UIFont(name: "Lato-Bold", size: 17.0)
 		label.backgroundColor = .clear
 		return label

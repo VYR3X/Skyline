@@ -55,7 +55,12 @@ final class ViewController: UIViewController {
 		return button
 	}()
 
-	let pinPad = SkyPinPad()
+	lazy var pinPad: SkyPinPad = {
+		let pinPad = SkyPinPad()
+		pinPad.layer.cornerRadius = 10
+		pinPad.backgroundColor = .white
+		return pinPad
+	}()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -85,9 +90,9 @@ final class ViewController: UIViewController {
 //			currencyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 //			currencyButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
 
-			pinPad.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-			pinPad.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-			pinPad.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
+			pinPad.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 80),
+			pinPad.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -80),
+			pinPad.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40)
 		])
 	}
 }

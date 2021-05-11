@@ -85,6 +85,7 @@ public final class SkyPinPad: UIView {
 		super.init(frame: .zero)
 		sky.owner = self
 		self.translatesAutoresizingMaskIntoConstraints = false
+		backgroundColor = .white
 		setupViews()
 	}
 

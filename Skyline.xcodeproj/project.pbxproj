@@ -68,6 +68,8 @@
 		01C6981E2641BAD2007AE440 /* UserGroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6981D2641BAD2007AE440 /* UserGroupHeaderView.swift */; };
 		01C698222641BAE6007AE440 /* UserGroupMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C698212641BAE6007AE440 /* UserGroupMemberCell.swift */; };
 		01C698262641C1DF007AE440 /* SkyPinPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C698252641C1DF007AE440 /* SkyPinPad.swift */; };
+		01FAB33D264AD97300B7CD08 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FAB33C264AD97300B7CD08 /* BaseViewController.swift */; };
+		01FAB343264ADB4100B7CD08 /* DesignSystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FAB342264ADB4100B7CD08 /* DesignSystemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +168,8 @@
 		01C6981D2641BAD2007AE440 /* UserGroupHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupHeaderView.swift; sourceTree = "<group>"; };
 		01C698212641BAE6007AE440 /* UserGroupMemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupMemberCell.swift; sourceTree = "<group>"; };
 		01C698252641C1DF007AE440 /* SkyPinPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyPinPad.swift; sourceTree = "<group>"; };
+		01FAB33C264AD97300B7CD08 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		01FAB342264ADB4100B7CD08 /* DesignSystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -556,6 +560,8 @@
 			children = (
 				01C6971A2641A6EC007AE440 /* ViewController.swift */,
 				01C698132641BA59007AE440 /* MainViewController.swift */,
+				01FAB33C264AD97300B7CD08 /* BaseViewController.swift */,
+				01FAB342264ADB4100B7CD08 /* DesignSystemViewController.swift */,
 				012B16F2264482AA004968D9 /* Palette */,
 				01C698032641B32F007AE440 /* PanSections */,
 			);
@@ -803,8 +809,10 @@
 			files = (
 				01C6981E2641BAD2007AE440 /* UserGroupHeaderView.swift in Sources */,
 				017CED3426486BBC00669BA9 /* BasicViewController.swift in Sources */,
+				01FAB343264ADB4100B7CD08 /* DesignSystemViewController.swift in Sources */,
 				012B16ED264478E0004968D9 /* PaletteViewController.swift in Sources */,
 				01C698222641BAE6007AE440 /* UserGroupMemberCell.swift in Sources */,
+				01FAB33D264AD97300B7CD08 /* BaseViewController.swift in Sources */,
 				012B16F4264482BC004968D9 /* ColorCell.swift in Sources */,
 				01C6971B2641A6EC007AE440 /* ViewController.swift in Sources */,
 				017CED5426486C9A00669BA9 /* ProfileViewController.swift in Sources */,
@@ -983,6 +991,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Skyline/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1009,6 +1018,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Skyline/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

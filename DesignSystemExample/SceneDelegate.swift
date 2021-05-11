@@ -41,7 +41,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		let item4 = UITabBarItem()
 		item4.title = "Settings"
-		let settingsVC = ViewController()
+		let settingsVC = DesignSystemViewController()
 		settingsVC.tabBarItem = item4
 
 		let tabBarController = UITabBarController()
