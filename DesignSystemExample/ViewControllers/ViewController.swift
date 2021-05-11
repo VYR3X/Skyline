@@ -50,8 +50,8 @@ final class ViewController: UIViewController {
 		let button = SkyButton(skytype: .primary(size: .large))
 //		let button = SkyButton(skytype: .text)
 		button.sky.text = "Кнопка"
-		button.sky.textColor = .backgroundDefault
-		button.sky.backgroundColor = .generalBrand
+//		button.sky.textColor = .backgroundDefault
+//		button.sky.backgroundColor = .generalBrand
 		return button
 	}()
 
@@ -76,7 +76,8 @@ final class ViewController: UIViewController {
 		NSLayoutConstraint.activate([
 
 //			button.heightAnchor.constraint(equalToConstant: 30),
-			button.widthAnchor.constraint(equalTo: view.widthAnchor),
+//			button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: 20),
+			button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
 			button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 			button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
 
