@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
   This CocoaPods library helps you create beautiful UI.
                    DESC
 
-  spec.homepage     = "https://github.com/Vladislav-Zhokhov/Skyline"
+  spec.homepage     = "https://github.com/VYR3X/Skyline"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -64,7 +64,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
-  spec.ios.deployment_target = "8.0"
+  spec.ios.deployment_target = "13.0"
   spec.swift_version = "5.0"
   # spec.ios.deployment_target = "5.0"
   # spec.osx.deployment_target = "10.7"
@@ -78,7 +78,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/Vladislav-Zhokhov/Skyline.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/VYR3X/Skyline.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
