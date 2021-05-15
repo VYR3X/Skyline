@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
  
   spec.name         = "Skyline"
-  spec.version      = "1.3.4"
+  spec.version      = "1.3.5"
   spec.summary      = "A CocoaPods library written in Swift"
 
   spec.description  = <<-DESC
